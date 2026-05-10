@@ -7,28 +7,26 @@ html, body{
   background:black;
 }
 
-/* FULLSCREEN CONTAINER */
+/* FULLSCREEN MENU */
 
 .screen{
   position:relative;
+
   width:100vw;
   height:100vh;
-  overflow:hidden;
 
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  overflow:hidden;
 }
 
-/* SCALE IMAGE TO FIT SCREEN */
+/* 16:9 BACKGROUND */
 
 .bg{
   position:absolute;
 
-  width:100vw;
-  height:100vh;
+  width:100%;
+  height:100%;
 
-  object-fit:contain;
+  object-fit:cover;
 
   top:0;
   left:0;
@@ -41,67 +39,104 @@ html, body{
 
   background:transparent;
 
-  width:14%;
-  height:4.5%;
-
-  left:7%;
-
   cursor:pointer;
 
   transition:0.2s;
 }
 
-/* HOVER EFFECT */
+/* OPTIONAL HOVER EFFECT */
 
 .btn:hover{
   border-bottom:3px solid white;
   filter:drop-shadow(0 0 10px white);
 }
 
-/* =====================
-   MAIN MENU
-===================== */
+/* =========================
+   MAIN MENU BUTTONS
+========================= */
+
+/* PLAY */
 
 .play{
+  left:6%;
   top:43%;
+
+  width:20%;
+  height:5%;
 }
+
+/* BONUS */
 
 .bonus{
+  left:6%;
   top:53%;
+
+  width:20%;
+  height:5%;
 }
+
+/* FILES */
 
 .files{
+  left:6%;
   top:63%;
+
+  width:20%;
+  height:5%;
 }
 
-/* =====================
-   BONUS MENU
-===================== */
+/* =========================
+   BONUS PAGE BUTTONS
+========================= */
 
 .scenes{
-  top:46%;
+  left:6%;
+  top:47%;
+
+  width:28%;
+  height:5%;
 }
 
 .commentary{
+  left:6%;
   top:58%;
+
+  width:28%;
+  height:5%;
 }
 
 .goback1{
-  top:71%;
+  left:6%;
+  top:70%;
+
+  width:20%;
+  height:5%;
 }
 
-/* =====================
-   FILES MENU
-===================== */
+/* =========================
+   FILES PAGE BUTTONS
+========================= */
 
 .posters{
-  top:49%;
+  left:6%;
+  top:50%;
+
+  width:24%;
+  height:5%;
 }
 
 .presskit{
+  left:6%;
   top:61%;
+
+  width:24%;
+  height:5%;
 }
 
 .goback2{
+  left:6%;
   top:73%;
+
+  width:20%;
+  height:5%;
 }
