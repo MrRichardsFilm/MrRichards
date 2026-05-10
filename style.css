@@ -37,7 +37,9 @@ html, body{
 .btn{
   position:absolute;
 
-  background:transparent;
+  background:red;
+  opacity:0.5;
+  border:2px solid white;
 
   cursor:pointer;
 
