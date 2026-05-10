@@ -1,18 +1,76 @@
-body {
-    background-color: black;
-    color: lime;
-    font-family: "Courier New", monospace;
+body{
+  margin:0;
+  background:black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  overflow:hidden;
 }
 
-a {
-    color: cyan;
-    text-decoration: none;
+.screen{
+  position:relative;
+  width:1280px;
 }
 
-a:hover {
-    color: yellow;
+.bg{
+  width:100%;
+  display:block;
 }
 
-img {
-    border: 2px solid white;
+.btn{
+  position:absolute;
+  left:90px;
+
+  width:340px;
+  height:55px;
+
+  transition:0.2s;
+}
+
+/* glow effect */
+.btn:hover{
+  box-shadow:0 0 20px white;
+}
+
+/* MAIN MENU */
+
+.play{
+  top:435px;
+}
+
+.bonus{
+  top:555px;
+}
+
+.files{
+  top:675px;
+}
+
+/* BONUS PAGE */
+
+.scenes{
+  top:510px;
+}
+
+.commentary{
+  top:645px;
+}
+
+.goback1{
+  top:785px;
+}
+
+/* FILES PAGE */
+
+.posters{
+  top:560px;
+}
+
+.presskit{
+  top:690px;
+}
+
+.goback2{
+  top:820px;
 }
