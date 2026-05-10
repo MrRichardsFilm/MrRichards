@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+    color: lime;
+    font-family: "Courier New", monospace;
+}
+
+a {
+    color: cyan;
+    text-decoration: none;
+}
+
+a:hover {
+    color: yellow;
+}
+
+img {
+    border: 2px solid white;
+}
