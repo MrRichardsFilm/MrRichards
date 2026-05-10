@@ -7,138 +7,101 @@ html, body{
   background:black;
 }
 
-/* FULLSCREEN MENU */
-
 .screen{
   position:relative;
-
   width:100vw;
   height:100vh;
-
   overflow:hidden;
 }
 
-/* 16:9 BACKGROUND */
-
 .bg{
   position:absolute;
+  inset:0;
 
   width:100%;
   height:100%;
 
   object-fit:cover;
-
-  top:0;
-  left:0;
 }
 
-/* INVISIBLE BUTTONS */
+/* DEBUG BUTTONS */
 
 .btn{
   position:absolute;
 
-  background:red; !important;
-  opacity:0.5; !important;
-  border:2px solid white; !important;
+  background:red !important;
+  opacity:0.35 !important;
+  border:2px solid white !important;
 
   cursor:pointer;
-
-  transition:0.2s;
 }
 
-/* OPTIONAL HOVER EFFECT */
+/* MAIN ALIGNMENT AREA */
 
-.btn:hover{
-  border-bottom:3px solid white;
-  filter:drop-shadow(0 0 10px white);
+.menu-zone{
+  position:absolute;
+
+  left:4.8%;
+  top:45%;
+
+  width:34%;
+  height:35%;
 }
 
-/* =========================
-   MAIN MENU BUTTONS
-========================= */
+/* SHARED LINE SIZE */
 
-/* PLAY */
+.line-btn{
+  position:absolute;
+
+  left:0;
+  width:75%;
+  height:6%;
+}
+
+/* MAIN MENU */
 
 .play{
-  left:6%;
-  top:60%;
-
-  width:20%;
-  height:5%;
+  top:0%;
 }
-
-/* BONUS */
 
 .bonus{
-  left:6%;
-  top:53%;
-
-  width:20%;
-  height:5%;
+  top:18%;
 }
-
-/* FILES */
 
 .files{
-  left:6%;
-  top:63%;
-
-  width:20%;
-  height:5%;
+  top:36%;
 }
 
-/* =========================
-   BONUS PAGE BUTTONS
-========================= */
+/* BONUS PAGE */
 
 .scenes{
-  left:6%;
-  top:47%;
-
-  width:28%;
-  height:5%;
+  top:0%;
+  width:90%;
 }
 
 .commentary{
-  left:6%;
-  top:58%;
-
-  width:28%;
-  height:5%;
+  top:18%;
+  width:90%;
 }
 
 .goback1{
-  left:6%;
-  top:70%;
-
-  width:20%;
-  height:5%;
+  top:40%;
+  width:75%;
 }
 
-/* =========================
-   FILES PAGE BUTTONS
-========================= */
+/* FILES PAGE */
 
 .posters{
-  left:6%;
-  top:50%;
-
-  width:24%;
-  height:5%;
+  top:0%;
+  width:82%;
 }
 
 .presskit{
-  left:6%;
-  top:61%;
-
-  width:24%;
-  height:5%;
+  top:18%;
+  width:82%;
 }
 
 .goback2{
-  left:6%;
-  top:73%;
-
-  width:20%;
-  height:5%;
+  top:40%;
+  width:75%;
 }
