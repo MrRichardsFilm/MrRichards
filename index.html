@@ -1,201 +1,26 @@
-```html
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>CLASSIFIED FILE</title>
-
-<style>
-
-/* GLOBAL STYLE */
-body {
-    background-color: black;
-    color: #00ff9c;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    overflow-x: hidden;
-}
-
-/* SCANLINE EFFECT */
-body::after {
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-        to bottom,
-        rgba(0,255,156,0.05),
-        rgba(0,255,156,0.05) 1px,
-        transparent 1px,
-        transparent 3px
-    );
-    pointer-events: none;
-}
-
-/* HEADER */
-.header {
-    text-align: center;
-    padding: 40px;
-    letter-spacing: 3px;
-}
-
-.title {
-    font-size: 42px;
-    font-weight: bold;
-}
-
-.subtitle {
-    font-size: 14px;
-    opacity: 0.6;
-}
-
-/* NAV */
-.nav {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.nav a {
-    color: #00ff9c;
-    text-decoration: none;
-    margin: 0 15px;
-    border: 1px solid #00ff9c;
-    padding: 8px 12px;
-    font-size: 12px;
-}
-
-.nav a:hover {
-    background-color: #00ff9c;
-    color: black;
-}
-
-/* MAIN CONTENT */
-.container {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-}
-
-/* VIDEO */
-.video {
-    border: 2px solid #00ff9c;
-    margin: 20px 0;
-}
-
-/* BUTTON */
-.button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    border: 1px solid #00ff9c;
-    color: #00ff9c;
-    cursor: pointer;
-    font-size: 12px;
-}
-
-.button:hover {
-    background: #00ff9c;
-    color: black;
-}
-
-/* TERMINAL TEXT */
-.terminal {
-    margin-top: 40px;
-    font-size: 12px;
-    text-align: left;
-    border-top: 1px solid #00ff9c;
-    padding-top: 20px;
-}
-
-/* GLITCH EFFECT */
-.glitch {
-    position: relative;
-    display: inline-block;
-}
-
-.glitch::before,
-.glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-}
-
-.glitch::before {
-    color: red;
-    animation: glitchTop 1s infinite;
-}
-
-.glitch::after {
-    color: blue;
-    animation: glitchBottom 1.2s infinite;
-}
-
-@keyframes glitchTop {
-    0% { clip-path: inset(0 0 80% 0); transform: translate(-2px,-2px); }
-    50% { clip-path: inset(0 0 10% 0); transform: translate(2px,2px); }
-    100% { clip-path: inset(0 0 80% 0); transform: translate(-2px,0); }
-}
-
-@keyframes glitchBottom {
-    0% { clip-path: inset(80% 0 0 0); transform: translate(2px,2px); }
-    50% { clip-path: inset(10% 0 0 0); transform: translate(-2px,-2px); }
-    100% { clip-path: inset(80% 0 0 0); transform: translate(0,2px); }
-}
-
-</style>
+  <title>MR RICHARDS</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="header">
-    <div class="title glitch" data-text="PROJECT: UNKNOWN">PROJECT: UNKNOWN</div>
-    <div class="subtitle">ACCESS LEVEL: RESTRICTED</div>
-</div>
+<div class="screen">
 
-<div class="nav">
-    <a href="#trailer">TRAILER</a>
-    <a href="#buy">BLU-RAY</a>
-    <a href="#files">FILES</a>
-</div>
+  <img src="main.jpg" class="bg">
 
-<div class="container">
+  <!-- PLAY -->
+  <a href="movie.mp4" class="btn play"></a>
 
-    <!-- TRAILER -->
-    <h2 id="trailer">SURVEILLANCE FOOTAGE</h2>
+  <!-- BONUS -->
+  <a href="bonus.html" class="btn bonus"></a>
 
-    <iframe class="video" width="560" height="315"
-    src="https://www.youtube.com/embed/YOURVIDEO"
-    frameborder="0" allowfullscreen></iframe>
-
-    <!-- BUY -->
-    <h2 id="buy">PHYSICAL MEDIA</h2>
-
-    <p>CLASSIFIED RECORD AVAILABLE ON BLU-RAY</p>
-
-    <div class="button" onclick="buy()">PURCHASE</div>
-
-    <!-- FILES -->
-    <h2 id="files">ARCHIVE FILES</h2>
-
-    <div class="terminal">
-        > file_01.mov .......... DECRYPTED<br>
-        > behind_scenes.mp4 .... ACCESS GRANTED<br>
-        > subject_log.txt ...... CORRUPTED<br>
-        > location_data.bin .... LOCKED<br>
-    </div>
+  <!-- FILES -->
+  <a href="files.html" class="btn files"></a>
 
 </div>
-
-<script>
-
-function buy() {
-    alert("TRANSACTION FAILED \nERROR CODE: 403\nACCESS DENIED");
-}
-
-</script>
 
 </body>
 </html>
-```
