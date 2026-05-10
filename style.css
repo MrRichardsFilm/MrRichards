@@ -1,18 +1,22 @@
 html, body{
   margin:0;
-  padding:0;
   width:100%;
   height:100%;
   overflow:hidden;
   background:black;
+
+  font-family:Arial, sans-serif;
 }
+
+/* SCREEN */
 
 .screen{
   position:relative;
   width:100vw;
   height:100vh;
-  overflow:hidden;
 }
+
+/* BACKGROUND IMAGE */
 
 .bg{
   position:absolute;
@@ -24,84 +28,95 @@ html, body{
   object-fit:cover;
 }
 
-/* DEBUG BUTTONS */
+/* DARK FILM LOOK */
 
-.btn{
+.overlay{
   position:absolute;
+  inset:0;
 
-  background:red !important;
-  opacity:0.35 !important;
-  border:2px solid white !important;
-
-  cursor:pointer;
+  background:rgba(0,0,0,0.25);
 }
 
-/* MAIN ALIGNMENT AREA */
+/* TITLE */
 
-.menu-zone{
+.title{
   position:absolute;
 
-  left:4.8%;
-  top:45%;
+  top:20%;
+  left:8%;
 
-  width:34%;
-  height:35%;
+  color:white;
+
+  font-size:4vw;
+  font-weight:300;
+  letter-spacing:0.6vw;
+
+  line-height:1.2;
 }
 
-/* SHARED LINE SIZE */
+/* MENU */
 
-.line-btn{
+.menu{
+  position:absolute;
+
+  left:7%;
+  top:48%;
+
+  width:25%;
+}
+
+/* EACH BUTTON */
+
+.menu-item{
+  position:relative;
+
+  display:block;
+
+  color:white;
+  text-decoration:none;
+
+  margin-bottom:4vw;
+
+  font-size:2vw;
+  letter-spacing:0.5vw;
+
+  transition:0.2s;
+}
+
+/* THE LINE */
+
+.menu-item::before{
+  content:"";
+
   position:absolute;
 
   left:0;
-  width:75%;
-  height:6%;
+  top:50%;
+
+  width:100%;
+  height:2px;
+
+  background:white;
+
+  transform:translateY(-50%);
 }
 
-/* MAIN MENU */
+/* TEXT ON TOP */
 
-.play{
-  top:0%;
+.menu-item span{
+  position:relative;
+
+  background:black;
+
+  padding-left:6vw;
+
+  padding-right:1vw;
 }
 
-.bonus{
-  top:18%;
-}
+/* HOVER EFFECT */
 
-.files{
-  top:36%;
-}
+.menu-item:hover{
+  transform:translateX(10px);
 
-/* BONUS PAGE */
-
-.scenes{
-  top:0%;
-  width:90%;
-}
-
-.commentary{
-  top:18%;
-  width:90%;
-}
-
-.goback1{
-  top:40%;
-  width:75%;
-}
-
-/* FILES PAGE */
-
-.posters{
-  top:0%;
-  width:82%;
-}
-
-.presskit{
-  top:18%;
-  width:82%;
-}
-
-.goback2{
-  top:40%;
-  width:75%;
+  filter:drop-shadow(0 0 8px white);
 }
